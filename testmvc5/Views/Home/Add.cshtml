@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление пользователя</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.PersonId" name="PersonId" />
+
+            <p>Фамилия</p><input type="text" name="Family" />
+            <p>Имя</p><input type="text" name="Name" />
+
+            <input type="submit" value="Отправить" />
+        </form>
+    </div>
+</body>
+</html>

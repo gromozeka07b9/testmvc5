@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>Пользователи</h3>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Фамилия</td>
+            <td>Имя</td>
+        </tr>
+        @foreach (var person in ViewBag.Persons)
+        {
+            <tr>
+                <td>@person.PersonId</td>
+                <td>@person.Family</td>
+                <td>@person.Name</td>
+                <td><a href="/Home/Person/@person.PersonId">Редактировать</a></td>
+            </tr>
+        }
+        Добавить:
+        <a href="/Home/Add">Добавить</a>
+    </table>
+</div>
